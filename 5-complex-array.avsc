@@ -30,7 +30,7 @@
                     "options": [
                         [
                             {
-                                "count": "This is a thing"
+                                "description": "This is a thing"
                             }
                         ]
                     ]
