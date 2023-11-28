@@ -293,4 +293,4 @@ This results in the error
 ```
 java.lang.RuntimeException: Invalid option for array schema: type java.util.LinkedHashMap, value '{count=1}'
 ```
-This can be traced to this ticket = https://github.com/confluentinc/kafka-connect-datagen/issues/70
+This can be traced to this ticket: https://github.com/confluentinc/kafka-connect-datagen/issues/70
