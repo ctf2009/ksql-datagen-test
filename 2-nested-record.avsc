@@ -1,0 +1,44 @@
+{
+    "type": "record",
+    "name": "Nested",
+    "fields": [
+        {
+            "name": "id",
+            "type": {
+                "type": "string",
+                "arg.properties": {
+                    "regex": "[a-zA-Z]{5,15}"
+                }
+            }
+        },
+        {
+            "name": "nested",
+            "type": {
+                "type": "record",
+                "name": "NestedRecord",
+                "fields": [
+                    {
+                        "name": "count",
+                        "type": "int"
+                    },
+                    {
+                        "name": "hash",
+                        "type": "string"
+                    }
+                ],
+                "arg.properties": {
+                    "options": [
+                        {
+                            "count": 10,
+                            "hash": "hash1"
+                        },
+                        {
+                            "count": 20,
+                            "hash": "hash2"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "type": "record",
+    "name": "ComplexArray",
+    "fields": [
+        {
+            "name": "id",
+            "type": {
+                "type": "string",
+                "arg.properties": {
+                    "regex": "[a-zA-Z]{5,15}",
+                    "prefix": "test_"
+                }
+            }
+        },
+        {
+            "name": "things",
+            "type": {
+                "type": "array",
+                "items": {
+                    "name": "thing",
+                    "type": "record",
+                    "fields": [
+                        {
+                            "name": "description",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "arg.properties": {
+                    "options": [
+                        [
+                            {
+                                "count": "This is a thing"
+                            }
+                        ]
+                    ]
+                }
+            }
+        }
+    ]
+}

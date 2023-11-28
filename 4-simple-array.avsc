@@ -1,0 +1,42 @@
+{
+    "type": "record",
+    "name": "SimpleArray",
+    "fields": [
+        {
+            "name": "id",
+            "type": {
+                "type": "string",
+                "arg.properties": {
+                    "regex": "[a-zA-Z]{5,15}",
+                    "prefix": "test_"
+                }
+            }
+        },
+        {
+            "name": "things",
+            "type": {
+                "type": "array",
+                "items": "string",
+                "arg.properties": {
+                    "options": [
+                        [
+                            "thing1",
+                            "thing2"
+                        ],
+                        [
+                            "thing1",
+                            "thing2",
+                            "thing3"
+                        ],
+                        [
+                            "thing1",
+                            "thing2",
+                            "thing3",
+                            "thing4"
+                        ]
+                    ]
+                }
+            }
+        }
+    ]
+}

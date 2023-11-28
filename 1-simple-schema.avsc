@@ -1,0 +1,40 @@
+{
+    "type": "record",
+    "name": "Simple",
+    "fields": [
+        {
+            "name": "id",
+            "type": {
+                "type": "string",
+                "arg.properties": {
+                    "regex": "[a-zA-Z]{5,15}"
+                }
+            }
+        },
+        {
+            "name": "code",
+            "type": {
+                "type": "string",
+                "arg.properties": {
+                    "options": [
+                        "code1",
+                        "code2",
+                        "code3"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "count",
+            "type": {
+                "type": "long",
+                "arg.properties": {
+                    "range": {
+                        "min": 10,
+                        "max": 1000
+                    }
+                }
+            }
+        }
+    ]
+}
